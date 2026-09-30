@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jhum & Razin's Marriage Ceremony</title>
+<style>
+:root{
+  --red:#9f1239; --rose:#e11d48; --pink:#fff1f2; --gold:#d4a017;
+  --ink:#3b1722; --paper:#fffaf5;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);
+  background:radial-gradient(circle at top,#ffe4e6 0,#fff7ed 42%,#fff 100%);
+}
+header{
+  text-align:center;padding:48px 20px 35px;background:linear-gradient(135deg,#881337,#be123c);
+  color:white;position:relative;overflow:hidden;
+}
+header:before,header:after{content:"✦";position:absolute;font-size:80px;opacity:.12}
+header:before{left:7%;top:10px} header:after{right:7%;bottom:-20px}
+h1{font-size:clamp(2.1rem,6vw,4.5rem);margin:5px 0}
+.subtitle{font-family:Arial,sans-serif;letter-spacing:2px}
+.container{max-width:1000px;margin:auto;padding:25px 16px 70px}
+.card{
+  background:rgba(255,255,255,.92);border:1px solid #f3c8d0;border-radius:22px;
+  padding:25px;margin:20px 0;box-shadow:0 12px 35px rgba(136,19,55,.10)
+}
+h2{color:var(--red);margin-top:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+label{display:block;font-family:Arial,sans-serif;font-weight:700;margin-bottom:7px}
+input,textarea{
+  width:100%;padding:13px;border:1px solid #e9b5c0;border-radius:12px;
+  font-size:16px;background:#fffdfc
+}
+button{
+  border:0;border-radius:999px;padding:13px 22px;font-weight:800;cursor:pointer;
+  font-size:15px;margin:5px
+}
+.primary{background:var(--rose);color:white}.secondary{background:#ffe4e6;color:#9f1239}
+.dark{background:#3b1722;color:white}
+.tabs{text-align:center;margin:10px 0 25px}
+.tab.active{outline:3px solid #fecdd3}
+.step{
+  display:flex;gap:15px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed #efc5cc
+}
+.step:last-child{border-bottom:0}.num{
+  min-width:34px;height:34px;border-radius:50%;background:#ffe4e6;color:#9f1239;
+  display:grid;place-items:center;font-weight:900
+}
+.signature{
+  height:90px;border:2px dashed #e9b5c0;border-radius:14px;background:#fffdfc;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;color:#999
+}
+.certificate{
+  text-align:center;padding:40px 25px;border:7px double var(--gold);
+  background:#fffaf0;position:relative
+}
+.certificate h2{font-size:2.2rem}.names{font-size:2rem;color:#881337;font-weight:bold}
+.seal{margin:25px auto;border:3px solid var(--red);width:90px;height:90px;border-radius:50%;
+display:grid;place-items:center;color:var(--red);font-weight:bold;transform:rotate(-8deg)}
+.hidden{display:none}
+.modal{
+ position:fixed;inset:0;background:rgba(34,8,17,.72);display:none;place-items:center;
+ z-index:10;padding:20px
+}
+.modal.show{display:grid}.modalbox{
+ max-width:560px;background:#fff;border-radius:28px;padding:38px;text-align:center;
+ box-shadow:0 30px 80px rgba(0,0,0,.35);animation:pop .35s ease
+}
+.modalbox .emoji{font-size:55px}
+@keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+.notice{font-family:Arial,sans-serif;font-size:14px;color:#6b3542}
+footer{text-align:center;padding:25px;color:#7b4755;font-family:Arial,sans-serif}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="subtitle">THE MOST SERIOUSLY UN-SERIOUS CEREMONY</div>
+  <h1>Jhum & Razin's<br>Marriage Ceremony</h1>
+  <div>♡ Officially unofficial since whenever we say so ♡</div>
+</header>
+
+<div class="container">
+  <div class="tabs">
+    <button class="tab primary active" onclick="showSection('marriage',this)">💍 Marriage</button>
+    <button class="tab secondary" onclick="showSection('divorce',this)">📜 Divorce</button>
+  </div>
+
+  <section id="marriage">
+    <div class="card">
+      <h2>📋 বিবাহ Registration Form</h2>
+      <p class="notice">Fill this out with maximum seriousness and absolutely minimum common sense.</p>
+      <div class="grid">
+        <div><label>Bride / বউ</label><input id="bride" value="Jhum"></div>
+        <div><label>Groom / জামাই</label><input id="groom" value="Razin"></div>
+        <div><label>Wedding Date</label><input id="date" type="date"></div>
+        <div><label>Special Wedding Location</label><input id="place" value="Our Little World"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🕌💐 Bangali Wedding Formalities</h2>
+      <div class="step"><div class="num">1</div><div><b>বরযাত্রী Arrival</b><br>Razin's party arrives with confidence and questionable dance moves.</div></div>
+      <div class="step"><div class="num">2</div><div><b>বরণ</b><br>Jhum officially receives the handsome problem she ordered.</div></div>
+      <div class="step"><div class="num">3</div><div><b>মালা বদল</b><br>Exchange imaginary garlands. No escape route permitted.</div></div>
+      <div class="step"><div class="num">4</div><div><b>Seven Promises</b><br>Food, loyalty, teasing, random calls, emotional support, stealing hoodies, and forever.</div></div>
+      <div class="step"><div class="num">5</div><div><b>Final Declaration</b><br>Both parties sign below and accept the highly suspicious terms.</div></div>
+    </div>
+
+    <div class="card">
+      <h2>✍️ Joint Signature</h2>
+      <div class="grid">
+        <div>
+          <label>Jhum's Signature</label>
+          <input id="sig1" placeholder="Type your signature / name">
+          <div class="signature" id="sigDisplay1">Signature preview</div>
+        </div>
+        <div>
+          <label>Razin's Signature</label>
+          <input id="sig2" placeholder="Type your signature / name">
+          <div class="signature" id="sigDisplay2">Signature preview</div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:20px">
+        <button class="primary" onclick="marry()">💍 SIGN & GET MARRIED</button>
+      </p>
+    </div>
+
+    <div id="marriageCert" class="card hidden">
+      <div class="certificate">
+        <div>✦ ✦ ✦</div>
+        <h2>Officially Married</h2>
+        <p>This certificate confirms that</p>
+        <div class="names" id="certNames">Jhum ♥ Razin</div>
+        <p>have entered into the sacred institution of<br><b>Being Each Other's Problem Forever™</b></p>
+        <div class="seal">LOVE<br>SEAL</div>
+        <p id="certDetails"></p>
+        <button class="dark" onclick="window.print()">🖨 Print Certificate</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="divorce" class="hidden">
+    <div class="card">
+      <h2>📜 Mutual Divorce Department</h2>
+      <p>Because apparently even fictional marriages need paperwork.</p>
+      <div class="grid">
+        <div><label>Applicant 1</label><input id="d1" value="Jhum"></div>
+        <div><label>Applicant 2</label><input id="d2" value="Razin"></div>
+      </div>
+      <br>
+      <label>Reason for Divorce</label>
+      <textarea id="reason" rows="4" placeholder="e.g. stole my food, stole my blanket, refused to admit I was right..."></textarea>
+      <p style="text-align:center">
+        <button class="primary" onclick="divorce()">📜 FILE DIVORCE</button>
+      </p>
+    </div>
+
+    <div id="divorceCert" class="card hidden">
+      <div class="certificate">
+        <h2>Divorce-ish Certificate</h2>
+        <p id="divorceNames" class="names"></p>
+        <p>have mutually agreed to temporarily terminate the relationship contract.</p>
+        <p><b>Reason:</b> <span id="divorceReason"></span></p>
+        <p style="font-size:1.2rem">No refunds. No warranties. No escape from the group chat.</p>
+        <button class="dark" onclick="window.print()">🖨 Print Certificate</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  Made with unreasonable amounts of love, chaos & inside jokes.<br>
+  Jhum × Razin — Marriage Department © 2026
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modalbox">
+    <div class="emoji" id="modalEmoji">💍</div>
+    <h2 id="modalTitle">Congratulations!</h2>
+    <p id="modalText"></p>
+    <button class="primary" onclick="closeModal()">Okay Babe 😏</button>
+  </div>
+</div>
+
+<script>
+function showSection(id,btn){
+  document.getElementById('marriage').classList.toggle('hidden',id!=='marriage');
+  document.getElementById('divorce').classList.toggle('hidden',id!=='divorce');
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+}
+function bindSig(input,display){
+  document.getElementById(input).addEventListener('input',e=>{
+    document.getElementById(display).textContent=e.target.value || 'Signature preview';
+  });
+}
+bindSig('sig1','sigDisplay1'); bindSig('sig2','sigDisplay2');
+
+function openModal(title,text,emoji){
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalText').textContent=text;
+  document.getElementById('modalEmoji').textContent=emoji;
+  document.getElementById('modal').classList.add('show');
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+
+function marry(){
+  const b=document.getElementById('bride').value||'Jhum';
+  const g=document.getElementById('groom').value||'Razin';
+  const d=document.getElementById('date').value;
+  const p=document.getElementById('place').value||'Our Little World';
+  document.getElementById('certNames').textContent=`${b} ♥ ${g}`;
+  document.getElementById('certDetails').textContent=
+    `Ceremony held at ${p}${d ? ' on '+d : ''}.`;
+  document.getElementById('marriageCert').classList.remove('hidden');
+  openModal('MARRIAGE SUCCESSFUL 💍',
+    `Congratulations, ${b} & ${g}! You are now officially stuck with each other. Let the chaos begin. 😏`,
+    '💍');
+}
+function divorce(){
+  const a=document.getElementById('d1').value||'Jhum';
+  const b=document.getElementById('d2').value||'Razin';
+  const r=document.getElementById('reason').value||'Irreconcilable levels of nonsense.';
+  document.getElementById('divorceNames').textContent=`${a} × ${b}`;
+  document.getElementById('divorceReason').textContent=r;
+  document.getElementById('divorceCert').classList.remove('hidden');
+  openModal('DIVORCE PROCESSED 📜',
+    `Fine. Go be chaotic separately... or don't. Either way, this breakup paperwork is suspiciously romantic. 😏`,
+    '📜');
+}
+</script>
+</body>
+</html>
